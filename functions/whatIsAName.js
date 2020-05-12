@@ -2,9 +2,10 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/seek-and-destroy
 
 // My solution
+const { isArray, isObject } = require("../util/validators");
 
 const whatIsInAName = (collection, source) => {
-  if (!Array.isArray(collection) && !isObject(source)) {
+  if (!isArray(collection) && !isObject(source)) {
     return "collection and source must be an array and an object respectively";
   } else {
     let srcKeys = Object.keys(source);
@@ -14,14 +15,6 @@ const whatIsInAName = (collection, source) => {
       });
     });
   }
-};
-
-//helper function
-const isObject = (val) => {
-  if (val === null) {
-    return false;
-  }
-  return Object.prototype.toString.call(val) === "[object Object]";
 };
 
 module.exports = whatIsInAName;

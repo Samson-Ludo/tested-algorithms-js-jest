@@ -2,9 +2,10 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/diff-two-arrays
 
 // My solution
+const { isArray } = require("../util/validators");
 
 const diffArray = (arr1, arr2) => {
-  if (!Array.isArray(arr1, arr2)) {
+  if (!isArray(arr1) && !isArray(arr2)) {
     return "arr1 and arr2 must both be arrays";
   } else {
     const mergedArray = arr1.concat(...arr2);
@@ -17,7 +18,5 @@ const diffArray = (arr1, arr2) => {
     return diff;
   }
 };
-
-// console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
 
 module.exports = diffArray;

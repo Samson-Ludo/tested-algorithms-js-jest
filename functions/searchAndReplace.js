@@ -4,11 +4,9 @@
 //My solution
 
 //helper validator function
-const isString = (value) => {
-  return typeof value === "string" || value instanceof String;
-};
+const { isString } = require("../util/validators");
 
-//check is initial is capital
+//check if initial is capital
 const initialIsCapital = (word) => {
   return word[0] !== word[0].toLowerCase();
 };

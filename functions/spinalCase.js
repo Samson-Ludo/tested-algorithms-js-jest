@@ -2,6 +2,7 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/spinal-tap-case
 
 //My solution
+const { isString } = require("../util/validators");
 
 const spinalCase = (str) => {
   //validate input
@@ -14,11 +15,6 @@ const spinalCase = (str) => {
 
   //change space and underscore to dahs
   return str.toLowerCase().replace(/\s+|_+/g, "-");
-};
-
-//helper function for checking if value is string
-const isString = (value) => {
-  return typeof value === "string" || value instanceof String;
 };
 
 module.exports = spinalCase;

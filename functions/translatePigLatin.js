@@ -2,6 +2,7 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/pig-latin
 
 //My solution
+const { isString } = require("../util/validators");
 
 const translatePigLatin = (str) => {
   const consonantRegex = /^[^aeiou]+/;
@@ -17,11 +18,6 @@ const translatePigLatin = (str) => {
   }
 
   return str + "way"; //if  str begins with a vowel
-};
-
-//helper validator function
-const isString = (value) => {
-  return typeof value === "string" || value instanceof String;
 };
 
 module.exports = translatePigLatin;
