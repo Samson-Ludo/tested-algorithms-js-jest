@@ -5,17 +5,8 @@
 
 //helper validator function
 const { isString } = require("../util/validators");
-
-//check if initial is capital
-const initialIsCapital = (word) => {
-  return word[0] !== word[0].toLowerCase();
-};
-
-//capitalize initial
-const capitalize = (s) => {
-  if (typeof s !== "string") return "";
-  return s.charAt(0).toUpperCase() + s.slice(1);
-};
+//import helperFunctions
+const { initialIsCapital, capitalize } = require("../util/helperFunctions");
 
 //Main funciton
 const myReplace = (str, before, after) => {
